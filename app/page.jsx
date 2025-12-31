@@ -2,6 +2,8 @@
 import Link from "next/link";
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { motion, AnimatePresence, useInView } from 'framer-motion';
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { 
   BookOpen, 
   Award, 

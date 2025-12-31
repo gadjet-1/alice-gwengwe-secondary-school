@@ -1,10 +1,5 @@
-"use client";
-
 import { Geist, Geist_Mono } from "next/font/google";
-import { usePathname } from "next/navigation";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,22 +17,12 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const pathname = usePathname();
-
-  const isPortal =
-    pathname.startsWith("/student portal") ||
-    pathname.startsWith("/teachersp");
-
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
       >
-        {!isPortal && <Navbar />}
-
-        <main className="flex-grow">{children}</main>
-
-        {!isPortal && <Footer />}
+        {children}
       </body>
     </html>
   );

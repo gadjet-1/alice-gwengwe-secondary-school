@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import React, { useState, useEffect, useRef, useMemo } from 'react';
-import { Menu, X, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence, useInView } from 'framer-motion';
 import { 
   BookOpen, 
